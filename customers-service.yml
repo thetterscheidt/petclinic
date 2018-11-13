@@ -19,3 +19,7 @@ eureka:
  
   spring:
     profiles: mysql
+  
+  spring:
+    profiles: local
+    GIT_REPO: https://github.com/thetterscheidt/petclinic
