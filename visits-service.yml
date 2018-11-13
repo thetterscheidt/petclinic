@@ -17,4 +17,12 @@ eureka:
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka/
 
---spring.profiles.active=mysql
+  spring:
+    profiles: mysql
+    datasource:
+      schema: classpath*:db/mysql/schema.sql
+      data: classpath*:db/mysql/data.sql
+      url: jdbc:mysql://localhost:3306/petclinic?useSSL=fals
+      username: Tom
+      password: tom
+     initialization-mode: Never
