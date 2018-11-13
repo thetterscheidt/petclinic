@@ -28,7 +28,7 @@ eureka:
     datasource:
       schema: classpath*:db/mysql/schema.sql
       data: classpath*:db/mysql/data.sql
-      url: jdbc:mysql://localhost:3306/petclinic?useSSL=false
+      url: jdbc:Mysql://localhost:3306/petclinic?useSSL=false
       username: Tom
       password: tom
      initialization-mode: Never
