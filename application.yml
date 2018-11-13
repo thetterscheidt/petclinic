@@ -29,6 +29,9 @@ spring.cloud.refresh.refreshable: false
 # Logging
 logging.level.org.springframework: INFO
 
+spring:
+  profiles: local
+  GIT_REPO: https://github.com/thetterscheidt/petclinic
 
 ---
 spring:
