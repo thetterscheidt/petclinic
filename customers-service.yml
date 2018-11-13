@@ -19,7 +19,11 @@ eureka:
  
   spring:
     profiles: mysql
-  
-  spring:
-    profiles: local
-    GIT_REPO: https://github.com/thetterscheidt/petclinic
+    datasource:
+      schema: classpath*:db/mysql/schema.sql
+      data: classpath*:db/mysql/data.sql
+      url: jdbc:mysql://localhost:3306/petclinic?useSSL=fals
+      username: Tom
+      password: tom
+     initialization-mode: Never
+ 
