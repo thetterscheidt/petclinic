@@ -4,7 +4,7 @@
 server.port: 0
 
 # embedded database init, supports mysql too trough the 'mysql' spring profile
-database: mysqldb
+#database: mysqldb
  spring:
   profiles: mysql
   datasource:
