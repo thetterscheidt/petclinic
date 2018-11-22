@@ -25,4 +25,4 @@ eureka:
       url: jdbc:Mysql://localhost:3306/petclinic?useSSL=false
       username: Tom
       password: tom
-#     initialization-mode: Never
+      initialization-mode: never
