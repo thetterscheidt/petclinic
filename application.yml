@@ -6,21 +6,12 @@ server.port: 0
 # embedded database init, supports mysql too trough the 'mysql' spring profile
 petclinic.database: mysqldb
 spring:
-  profiles: mysql
   datasource:
-    schema: classpath*:db/mysql/schema.sql
-    data: classpath*:db/mysql/data.sql
-    url: jdbc:mysql://localhost:3306/petclinic?useSSL=false
-    username: Tom
-    password: tom
-    initialization-mode: never
-#spring:
-#  datasource:
- #   schema: classpath*:db/hsqldb/schema.sql
-#    data: classpath*:db/hsqldb/data.sql
-#  sleuth:
-#    sampler:
-#      percentage: 1.0
+    schema: classpath*:db/hsqldb/schema.sql
+    data: classpath*:db/hsqldb/data.sql
+  sleuth:
+    sampler:
+      percentage: 1.0
 
 # JPA
 spring.jpa.hibernate.ddl-auto: none
@@ -53,3 +44,13 @@ management:
     export:
       prometheus:
         enabled: true
+
+spring:
+  profiles: mysql
+  datasource:
+    schema: classpath*:db/mysql/schema.sql
+    data: classpath*:db/mysql/data.sql
+    url: jdbc:mysql://localhost:3306/petclinic?useSSL=false
+    username: Tom
+    password: tom
+    initialization-mode: never
