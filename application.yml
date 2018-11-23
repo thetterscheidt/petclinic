@@ -1,8 +1,7 @@
 # COMMON APPLICATION PROPERTIES
 
 # start services on random port by default
-server
-  port: 0
+server.port: 0
 
 # embedded database init, supports mysql too trough the 'mysql' spring profile
 petclinic.database: mysqldb
@@ -38,10 +37,18 @@ spring.cloud.refresh.refreshable: false
 # Logging
 logging.level.org.springframework: INFO
 
-#spring:
-#  profiles: local
-#  GIT_REPO: https://github.com/thetterscheidt/petclinic
-
----
-
-#    initialization-mode: NEVER
+# Metrics
+management:
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  metrics:
+    export:
+      prometheus:
+        enabled: true
