@@ -5,6 +5,15 @@ server.port: 0
 
 # embedded database init, supports mysql too trough the 'mysql' spring profile
 petclinic.database: mysql
+spring:
+  datasource:
+    schema: classpath*:db/mysql/schema.sql
+    data: classpath*:db/mysql/data.sql
+    url: jdbc:Mysql://localhost:3306/petclinic?useSSL=false
+    username: Tom
+    password: tom
+    initialization-mode: never
+
 #spring:
 #  datasource:
 #    schema: classpath*:db/hsqldb/schema.sql
@@ -45,12 +54,3 @@ management:
       prometheus:
         enabled: true
 
-spring:
-  profiles: mysql
-  datasource:
-    schema: classpath*:db/mysql/schema.sql
-    data: classpath*:db/mysql/data.sql
-    url: jdbc:Mysql://localhost:3306/petclinic?useSSL=false
-    username: Tom
-    password: tom
-    initialization-mode: never
