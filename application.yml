@@ -45,6 +45,7 @@ management:
       prometheus:
         enabled: true
 
+---
 spring:
   profiles: mysql
   datasource:
@@ -53,4 +54,4 @@ spring:
     url: jdbc:mysql://192.168.1.9:3306/petclinic?useSSL=false
     username: Tom
     password: harasidieh1
-    initialization-mode: never
+    initialization-mode: ALWAYS
