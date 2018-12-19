@@ -50,7 +50,7 @@ spring:
   datasource:
     schema: classpath*:db/mysql/schema.sql
     data: classpath*:db/mysql/data.sql
-    url: jdbc:Mysql://192.168.1.9:3306/petclinic?useSSL=false
+    url: jdbc:mysql://192.168.1.9:3306/petclinic?useSSL=false
     username: Tom
     password: harasidieh1
     initialization-mode: never
